@@ -35,7 +35,7 @@ class Generator(nn.Module):
         return self.gen(x)
     
 
-device = "cuda" if torch.has_cudnn else "cpu"
+device = "cuda" if torch.has_cuda else "cpu"
 lr = 3e-4
 latent_dim = 64
 image_dim = 784
